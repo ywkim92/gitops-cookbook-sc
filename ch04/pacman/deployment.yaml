@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pacman-kikd
+  name: pacman-kikd
+  namespace: pacman
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pacman-kikd
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pacman-kikd
+    spec:
+      containers:
+      - image: lordofthejars/pacman-kikd:1.0.0
+        name: pacman-kikd
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
