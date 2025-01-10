@@ -1,0 +1,3 @@
+- minikube
+  - install: `brew install minikube`
+  - `minikube start --driver=docker --alsologtostderr -p gitops --memory 8196`
